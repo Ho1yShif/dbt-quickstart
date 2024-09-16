@@ -7,4 +7,4 @@ SELECT
     amount / 100 AS amount_dollars,
     created AS created_at
 FROM {{ source('stripe', 'payment') }}
--- Needed to use this reference instead of the tutorial's recommended raw.stripe.payment
+-- Needed to use this reference instead of the tutorial's recommended raw.stripe.payment since our CDW is BigQuery, not Snowflake
