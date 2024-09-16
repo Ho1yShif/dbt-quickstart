@@ -6,5 +6,5 @@ SELECT
     --Raw amount is stored in cents
     amount / 100 AS amount_dollars,
     created AS created_at
-FROM `dbt-tutorial.stripe.payment`
+FROM {{ source('stripe', 'payment') }}
 -- Needed to use this reference instead of the tutorial's recommended raw.stripe.payment
